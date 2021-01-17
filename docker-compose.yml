@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  web:
+    container_name: react-boluomi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - '.:/app'
+    ports:
+      - 3000:3000
+      - 9005:9005
